@@ -18,4 +18,72 @@ body {
   font-family: $base-font-family;
   background-color: $base-background-color;
   color: $base-font-color;
+  @include outer-container;
+}
+
+.personal {
+  @include span-columns(2.8);
+  height: auto;
+  border-right: 1px solid black;
+}
+
+.personalInfo {
+  @include span-columns(12);
+  padding-top: 10px;
+
+
+  img {
+    height: 230px;
+    width: 230px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  #name{
+    font-size: 25px;
+    margin: 0;
+    font-weight: bold;
+
+  }
+
+  #login{
+    margin: 0;
+    font-size: 20px;
+    color: $medium-gray;
+    padding-bottom: 20px;
+  }
+
+
+  span {
+    color: $light-gray;
+    padding-right: 5px;
+
+  }
+
+  #location {
+
+  }
+
+  #datejoined {
+
+
+  }
+}
+
+.repos {
+  @include span-columns(8);
+  @include shift(0);
+  padding-top: 10px;
+  border: 1px solid black;
+  height: auto;
+
+}
+
+.repositories {
+  @include span-columns(12);
+
+    #name {
+      font-size: 30px;
+    }
+
 }
