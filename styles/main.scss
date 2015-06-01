@@ -19,12 +19,19 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
   @include outer-container;
+  a:link {color: slategray;
+  text-decoration: none;}
+  a:visited {color: slategray;
+  text-decoration:none;}
+  a:hover {color: rgba(54, 128, 199, 1);}
+  a:active {color: slategray;
+   text-decoration: none;}
 }
 
 .personal {
   @include span-columns(2.8);
   height: auto;
-  border-right: 1px solid black;
+
 }
 
 .personalInfo {
@@ -65,25 +72,134 @@ body {
   }
 
   #datejoined {
-
-
-  }
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
 }
+
+  .numbers {
+
+    @include span-columns(12);
+  
+    text-align: center;
+
+    a:link {
+      color: blue;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    a:visited {
+      color: blue;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    a:hover {
+      color: blue;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    a:active {
+      color: blue;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    a: {
+      color: blue;
+      font-size: 17px;
+    }
+
+    #followers {
+      display: block;
+      @include span-columns(3.5);
+      padding-left: 5px;
+    }
+
+    #following {
+      display: block;
+      @include span-columns(2.5);
+
+    }
+
+    #starred {
+      @include span-columns(3.5);
+      padding-left: 10px;
+    }
+  }
+
+
+}
+
 
 .repos {
   @include span-columns(8);
   @include shift(0);
   padding-top: 10px;
-  border: 1px solid black;
   height: auto;
 
 }
 
 .repositories {
   @include span-columns(12);
+  padding-top: 30px;
+
 
     #name {
-      font-size: 30px;
+      font-size: 20px;
+      @include span-columns(6);
+      padding-bottom: 10px;
+      padding-top: 30px;
+      font-weight: bolder;
+
+
+      a:link {
+        color: rgba(54, 128, 199, 1);
+
+      }
+
+      a:hover {
+        text-decoration:underline;
+      }
     }
 
-}
+    #language {
+      @include span-columns(1);
+      display: block;
+    @include shift(4);
+    padding-top: 30px;
+    font-size: 12px;
+    color: gray;
+    font-weight: bolder;
+
+    }
+
+    #stargazers{
+      padding-top: 30px;
+
+      float: right;
+      font-size: 12px;
+
+      }
+    }
+
+    #forks {
+    padding-top:30px;
+
+    float:right;
+    font-size: 12px;
+    }
+
+
+
+    #update
+    {
+      font-size: 12px;
+      @include span-columns(12);
+    padding-bottom: 30px;
+    padding-top: 5px;
+      border-bottom: 1px solid gray;
+      font-weight: bolder;
+      color: gray;
+    }

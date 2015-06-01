@@ -1,8 +1,10 @@
 
 
   {{#each this}}
-  <div id="name">{{name}}</div>
-  <div id="language">{{language}}</div> <div id="stargazers"><span class="octicon octicon-star"></span> {{stargazers_count}}</div> <div id="forks"><span class="octicon octicon-git-branch"></span> {{forks_count}}</div>
-  <div id="update">{{updated_at}}</div>
+  <div id="name"><a href="{{url}}">{{name}}<a></div>
+  <div id="language">{{language}}</div>
+  <div id="stargazers"><a href="{{stargazers_url}}"><span class="octicon octicon-star"></span> {{stargazers_count}}</a></div>
+  <div id="forks"><a href="{{forks_url}}"><span class="octicon octicon-git-branch"></span> {{forks_count}}</a></div>
+  <div id="update"> Updated {{updated_at}} days ago.</div>
 
   {{/each}}
